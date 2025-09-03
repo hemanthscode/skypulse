@@ -1,0 +1,32 @@
+{
+  "name": "skypulse",
+  "version": "1.0.0",
+  "description": "Sky Pulse Weather App",
+  "main": "app.js",
+  "scripts": {
+    "build-css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hemanthscode/skypulse.git"
+  },
+  "keywords": [
+    "weather",
+    "app",
+    "tailwindcss"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hemanthscode/skypulse/issues"
+  },
+  "homepage": "https://github.com/hemanthscode/skypulse#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17"
+  }
+}

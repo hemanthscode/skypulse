@@ -1,0 +1,318 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: #0a0a0a;
+}
+
+/* Performance optimized glassmorphism effects */
+.neon-card {
+  background: rgba(26, 26, 26, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid;
+  border-radius: 24px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  will-change: border-color, box-shadow;
+}
+
+.neon-card-blue {
+  border-color: rgba(0, 212, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 212, 255, 0.1);
+}
+
+.neon-card-blue:hover {
+  border-color: rgba(0, 212, 255, 0.6);
+  box-shadow: 0 12px 40px rgba(0, 212, 255, 0.2);
+}
+
+.neon-card-purple {
+  border-color: rgba(168, 85, 247, 0.3);
+  box-shadow: 0 8px 32px rgba(168, 85, 247, 0.1);
+}
+
+.neon-card-purple:hover {
+  border-color: rgba(168, 85, 247, 0.6);
+  box-shadow: 0 12px 40px rgba(168, 85, 247, 0.2);
+}
+
+.neon-card-pink {
+  border-color: rgba(236, 72, 153, 0.3);
+  box-shadow: 0 8px 32px rgba(236, 72, 153, 0.1);
+}
+
+.neon-card-pink:hover {
+  border-color: rgba(236, 72, 153, 0.6);
+  box-shadow: 0 12px 40px rgba(236, 72, 153, 0.2);
+}
+
+.neon-card-green {
+  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow: 0 8px 32px rgba(16, 185, 129, 0.1);
+}
+
+.neon-card-green:hover {
+  border-color: rgba(16, 185, 129, 0.6);
+  box-shadow: 0 12px 40px rgba(16, 185, 129, 0.2);
+}
+
+.neon-card-yellow {
+  border-color: rgba(245, 158, 11, 0.3);
+  box-shadow: 0 8px 32px rgba(245, 158, 11, 0.1);
+}
+
+.neon-card-yellow:hover {
+  border-color: rgba(245, 158, 11, 0.6);
+  box-shadow: 0 12px 40px rgba(245, 158, 11, 0.2);
+}
+
+.neon-card-cyan {
+  border-color: rgba(6, 182, 212, 0.3);
+  box-shadow: 0 8px 32px rgba(6, 182, 212, 0.1);
+}
+
+.neon-card-cyan:hover {
+  border-color: rgba(6, 182, 212, 0.6);
+  box-shadow: 0 12px 40px rgba(6, 182, 212, 0.2);
+}
+
+/* Optimized Bento Grid */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
+  grid-auto-rows: minmax(200px, auto);
+}
+
+@media (max-width: 1279px) {
+  .bento-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Enhanced search dropdown */
+.search-dropdown {
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 212, 255, 0.2);
+  border-radius: 16px;
+  max-height: 300px;
+  overflow-y: auto;
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+}
+
+.search-item {
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(42, 42, 42, 0.5);
+}
+
+.search-item:hover {
+  background: rgba(0, 212, 255, 0.1);
+  border-left: 3px solid #00d4ff;
+}
+
+.search-item:last-child {
+  border-bottom: none;
+}
+
+/* Hourly cards optimization */
+.hourly-card {
+  min-width: 100px;
+  background: rgba(42, 42, 42, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 16px;
+  padding: 16px 12px;
+  text-align: center;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  will-change: border-color, background-color;
+}
+
+.hourly-card:hover {
+  border-color: rgba(0, 212, 255, 0.5);
+  background: rgba(42, 42, 42, 0.9);
+}
+
+/* Daily forecast rows */
+.daily-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(42, 42, 42, 0.5);
+  transition: all 0.3s ease;
+}
+
+.daily-row:hover {
+  background: rgba(0, 212, 255, 0.05);
+  border-radius: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.daily-row:last-child {
+  border-bottom: none;
+}
+
+/* Progress bars */
+.progress-container {
+  background: rgba(42, 42, 42, 0.8);
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #00d4ff, #06b6d4);
+  border-radius: 4px;
+  transition: width 1.5s ease;
+}
+
+/* UV Circle */
+.uv-circle {
+  transform: rotate(-90deg);
+}
+
+/* Weather icons with optimized glow */
+.weather-icon {
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6));
+  animation: glow 4s ease-in-out infinite alternate;
+}
+
+/* Loading animation */
+.loading-spinner {
+  border: 3px solid rgba(0, 212, 255, 0.2);
+  border-top: 3px solid #00d4ff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Scrollbar styling */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Card content layout */
+.card-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Neon text effects */
+.neon-text-blue {
+  color: #00d4ff;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.neon-text-purple {
+  color: #a855f7;
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+}
+
+.neon-text-pink {
+  color: #ec4899;
+  text-shadow: 0 0 10px rgba(236, 72, 153, 0.5);
+}
+
+.neon-text-green {
+  color: #10b981;
+  text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+}
+
+.neon-text-yellow {
+  color: #f59e0b;
+  text-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+}
+
+.neon-text-cyan {
+  color: #06b6d4;
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+}
+
+/* Error handling */
+.error-state {
+  border-color: rgba(239, 68, 68, 0.3) !important;
+  box-shadow: 0 8px 32px rgba(239, 68, 68, 0.2) !important;
+  animation: pulse-error 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-error {
+  0% {
+    box-shadow: 0 8px 32px rgba(239, 68, 68, 0.2);
+  }
+  100% {
+    box-shadow: 0 12px 40px rgba(239, 68, 68, 0.3);
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus states for accessibility */
+.search-input:focus-visible,
+.search-item:focus-visible {
+  outline: 2px solid #00d4ff;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .neon-card {
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+  }
+}
